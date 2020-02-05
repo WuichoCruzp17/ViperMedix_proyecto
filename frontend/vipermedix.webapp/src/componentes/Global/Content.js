@@ -10,7 +10,7 @@ class Content extends Component{
     render(){
         const {body} = this.props;
         return (
-            <div className="container-fluid" style={{marginTop:'10px'}}>
+            <div className="container-fluid">
                 {body}
             </div>
         );

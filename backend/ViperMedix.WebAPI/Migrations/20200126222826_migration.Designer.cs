@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ViperMedix.WebAPI.Models;
 
 namespace ViperMedix.WebAPI.Migrations
 {
     [DbContext(typeof(ViperMedixContext))]
-    partial class ViperMedixContextModelSnapshot : ModelSnapshot
+    [Migration("20200126222826_migration")]
+    partial class migration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -799,6 +801,10 @@ namespace ViperMedix.WebAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
+
+                    b.Property<string>("LotNumber")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.Property<int>("ProductSubCategoryId")
                         .HasColumnType("int");

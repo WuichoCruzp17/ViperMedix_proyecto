@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Modal, Button} from 'react-bootstrap';
+import {Modal} from 'react-bootstrap';
 class MensajeError extends Component{
 
    constructor(props){
@@ -14,7 +14,15 @@ class MensajeError extends Component{
     };
    } 
     
-    
+    render(){
+        return(
+            <Modal.Dialog>
+                <Modal.Body>
+                    
+                </Modal.Body>
+            </Modal.Dialog>
+        );
+    }
 
 }
 

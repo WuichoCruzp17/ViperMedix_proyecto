@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ViperMedix.WebAPI.Models;
 
 namespace ViperMedix.WebAPI.Migrations
 {
     [DbContext(typeof(ViperMedixContext))]
-    partial class ViperMedixContextModelSnapshot : ModelSnapshot
+    [Migration("20200127035315_Remove_Field_LotNumber_Product")]
+    partial class Remove_Field_LotNumber_Product
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

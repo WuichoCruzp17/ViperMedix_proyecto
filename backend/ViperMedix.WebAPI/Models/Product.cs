@@ -29,10 +29,6 @@ namespace ViperMedix.WebAPI.Models
         [DataType(DataType.Text, ErrorMessage = "The field Laboratory must be a string")]
         public String Laboratory { get; set; }
 
-        [StringLength(100, ErrorMessage = "The field LotNumber must have max length of 100 characters")]
-        [DataType(DataType.Text, ErrorMessage = "The field LotNumber must be a string")]
-        public String LotNumber { get; set; }
-
         [Required(ErrorMessage = "The field ProductSubCategoryId is required")]
         [Range(0, int.MaxValue, ErrorMessage = "The field ProductSubCategoryId must be a number.")]
         public int ProductSubCategoryId { get; set; }
